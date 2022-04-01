@@ -41,7 +41,7 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "css"
     }
   },
   "defaultProject": "store"
