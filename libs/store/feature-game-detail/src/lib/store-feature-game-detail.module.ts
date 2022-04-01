@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatButtonModule} from "@angular/material/button";
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { GameDetailComponent } from './game-detail/game-detail.component';
@@ -11,6 +12,7 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
       { path: '', pathMatch: 'full', component: GameDetailComponent },
     ]),
     MatCardModule,
+    MatButtonModule
   ],
   declarations: [GameDetailComponent],
 })
