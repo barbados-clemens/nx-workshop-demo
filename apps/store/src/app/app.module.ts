@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatCardModule } from '@angular/material/card';
+
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    MatCardModule,
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
