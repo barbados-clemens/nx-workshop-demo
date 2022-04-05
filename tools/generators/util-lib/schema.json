@@ -20,9 +20,22 @@
         "message": "which direcotyr do you want for the lib?",
         "type": "list",
         "items": [
-          {"value": "store", "label": "store"},
-          {"value": "api", "label": "api"},
-          {"value": "shared", "label": "shared"}
+          {
+            "value": "api",
+            "label": "api"
+          },
+          {
+            "value": "shared",
+            "label": "shared"
+          },
+          {
+            "value": "store",
+            "label": "store"
+          },
+          {
+            "value": "video-games",
+            "label": "video-games"
+          }
         ]
       }
     }

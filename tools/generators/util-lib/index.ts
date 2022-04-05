@@ -1,7 +1,12 @@
 import { Tree, formatFiles, installPackagesTask, names } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/workspace/generators';
 
-export default async function (tree: Tree, schema: any) {
+interface Schema {
+  name: string;
+  directory: 'api' | 'shared' | 'store' | 'video-games';
+}
+
+export default async function (tree: Tree, schema: Schema) {
   const { fileName } = normalize(schema);
   await libraryGenerator(tree, {
     name: fileName.startsWith('util-') ? fileName : `util-${fileName}`,
@@ -14,7 +19,7 @@ export default async function (tree: Tree, schema: any) {
   };
 }
 
-function normalize(schema: any) {
+function normalize(schema: Schema) {
   return {
     ...schema,
     ...names(schema.name),
