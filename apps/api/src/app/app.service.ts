@@ -1,5 +1,7 @@
 import { Game } from '@bg-hoard/api-util-interface';
 import { Injectable } from '@nestjs/common';
+import {sendNotification } from '@bg-hoard/api/util-notifications';
+
 const games: Game[] = [
   {
     id: 'settlers-in-the-can',
@@ -35,7 +37,6 @@ export class AppService {
   }
 
   getGame(id: string): Game {
-    formatRating(0);
     return games.find((game) => game.id === id);
   }
 }

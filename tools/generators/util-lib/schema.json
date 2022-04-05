@@ -11,7 +11,21 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "directory": {
+      "type": "string",
+      "description": "Output directory for lib",
+      "aliases": ["dir"],
+      "x-prompt": {
+        "message": "which direcotyr do you want for the lib?",
+        "type": "list",
+        "items": [
+          {"value": "store", "label": "store"},
+          {"value": "api", "label": "api"},
+          {"value": "shared", "label": "shared"}
+        ]
+      }
     }
   },
-  "required": ["name"]
+  "required": ["name", "directory"]
 }
